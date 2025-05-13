@@ -41,18 +41,31 @@
             margin-bottom: 20px;
         }
 
-        .logout-btn {
-            background-color: #FF6347;
-            color: white;
+        .btn {
+            display: inline-block;
+            margin: 10px 5px;
             padding: 12px 20px;
-            text-decoration: none;
             font-size: 1rem;
             border-radius: 5px;
+            text-decoration: none;
+            color: white;
             transition: background-color 0.3s;
+        }
+
+        .logout-btn {
+            background-color: #FF6347;
         }
 
         .logout-btn:hover {
             background-color: #FF4500;
+        }
+
+        .logs-btn {
+            background-color: #007BFF;
+        }
+
+        .logs-btn:hover {
+            background-color: #0056b3;
         }
 
         .footer {
@@ -68,7 +81,8 @@
     <div class="content">
         <h1>Welcome to the Home Page!</h1>
         <p>You are logged in. We are glad to have you!</p>
-        <a href="/logout" class="logout-btn">Logout</a>
+        <a href="/logout" class="btn logout-btn">Logout</a>
+        <a href="/logs" class="btn logs-btn">View Logs</a>
     </div>
 </div>
 

@@ -62,11 +62,17 @@ public class LoginController {
     @GetMapping("/logs")
     public String viewLogs(HttpServletRequest request, Model model) {
         String user = (String) request.getSession().getAttribute("user");
+
         if (user == null) {
+            System.out.println("User not logged in. Redirecting to login.");
             return "redirect:/login";
         }
 
+        System.out.println("User " + user + " is accessing logs.");
         model.addAttribute("logList", loginService.getAllLogs());
         return "logs";
     }
+
+
+
 }
